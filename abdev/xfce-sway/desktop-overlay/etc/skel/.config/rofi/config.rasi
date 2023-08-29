@@ -1,0 +1,9 @@
+configuration {
+    modi: "window,combi,drun,filebrowser";
+    show-icons: true;
+    icon-theme: "Paprirus";
+    combi-modi: "window,drun";
+ }
+
+@theme  "applets/styles/material-dark/blue_grey"
+@import "applets/styles/material-dark/blue_grey.rasi"

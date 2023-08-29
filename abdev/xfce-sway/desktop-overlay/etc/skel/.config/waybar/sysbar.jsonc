@@ -1,0 +1,50 @@
+{ 
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 14, // Waybar height (to be removed for auto height)
+    "margin-top": 0,
+    "margin-bottom": 0,
+    // "fixed-center":false,
+    "mode": "dock", // dock|hide|invisible|overlay
+    // "width": 1280, // Waybar width
+    "spacing": 1, // Gaps between modules (px)
+    // Choose the order of the modules
+    // "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-left": [
+        "sway/workspaces",
+        "wlr/workspaces",
+        "sway/mode",
+        "custom/seperator",
+        "custom/thunar",
+        "custom/vscode",
+        "custom/seperator",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "sway/window",
+        "hyprland/window"
+    ],
+    // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": [
+        "custom/waybar-media-prev",
+        "custom/waybar-media-info",
+        "custom/waybar-media-nxt",
+        "backlight",
+        "pulseaudio",
+        "custom/seperator",
+
+        "bluetooth",
+        "network",
+        "custom/seperator",
+
+        // "cpu",
+        // "memory",
+        "temperature",
+        "battery",
+        "custom/battery-rate",
+        "clock",
+        "tray",
+        "custom/seperator",
+        "custom/power-button"
+    ],
+}

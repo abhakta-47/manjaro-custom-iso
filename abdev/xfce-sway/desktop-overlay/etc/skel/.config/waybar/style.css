@@ -1,0 +1,233 @@
+@import url("colors.css");
+
+* {
+    border: none;
+    border-radius: 0px;
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: Noto Sans, FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-size: 12px; 
+    font-family: Noto Sans, "Iosevka Nerd Font";
+    /* min-height: 0; */
+}
+
+window#waybar {
+    /* background-color: rgba(34, 34, 34, 0.1); */
+    background-color: transparent;
+    /* background-color: @background; */
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    color: #ffffff;
+    /* color: @foreground; */
+    transition-property: background-color;
+    transition-duration: .5s;
+    /* margin-top: 1px; */
+    /* padding: 1px 1px; */
+}
+
+window#waybar.hidden {
+    opacity: 0.1;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#workspaces button {
+    padding: 0 .5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each workspace name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+#workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 3px solid @secondary;
+    color: @secondary;
+}
+
+#workspaces button.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 3px solid @secondary;
+    /* color: @secondary; */
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    /* box-shadow: inset 0 -3px #ffffff; */
+    border-top: 3px solid #fff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    /* background-color: #64727D; */
+    background-color: #eb4d4b;
+    border-top: 3px solid @secondary;
+}
+
+#taskbar button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+#taskbar button.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 3px solid @secondary;
+}
+
+#taskbar button:hover {
+    background-color: transparent;
+    border-top: 3px solid #fff;
+}
+
+#taskbar,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#thunar,
+#vscode {
+    padding: 0 .4rem;
+    margin: 0 0.1rem;
+    color: #ffffff;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+.modules-left,
+/* .modules-center, */
+.modules-right {
+    /* background-color: #171e68; */
+    /* background-color: #460606; */
+    /* background-color: rgba(9, 13, 49, 0.8); */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: @background; */
+}
+
+.modules-left {
+    border-radius: 0 6px 6px 0;
+}
+
+.modules-center {
+    padding: 0 10px;
+    border-radius: 6px;
+}
+
+window#waybar.empty .modules-center {
+    padding: 0;
+    background-color: transparent;
+}
+
+.modules-right {
+    padding-left: 6px;
+    border-radius: 6px 0 0 6px;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#temperature.critical {
+    color: #eb4d4b;
+}
+
+#tray {
+    background-color: #171717;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#custom-thunar,
+#custom-vscode {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#custom-thunar:hover,
+#custom-vscode:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}

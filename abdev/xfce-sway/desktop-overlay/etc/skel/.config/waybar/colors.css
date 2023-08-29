@@ -1,0 +1,26 @@
+.noclass{
+    color: #222;  /* background */
+    color: #011627;  /* background */
+    color: #051767;  /* background */
+    color: #222;  /* foreground */
+    color: #dfdfdf;  /* foreground */
+    color: #555;  /* foreground */
+    color: #ffb52a;  /* primary */
+    color: #e60053;  /* secondary */
+    color: #7cf734;  /* safe */
+    color: #f79a36;  /* warn */
+    color: #fc2d2d;  /* danger */
+}
+
+
+@define-color background  #222;
+/* @define-color background #011627; */
+@define-color background-alt  #051767;
+@define-color foreground  #222;
+/* @define-color foreground  #dfdfdf; */
+@define-color foreground-alt  #555;
+@define-color primary  #ffb52a;
+@define-color secondary  #e60053;
+@define-color safe  #7cf734;
+@define-color warn  #f79a36;
+@define-color danger  #fc2d2d;
