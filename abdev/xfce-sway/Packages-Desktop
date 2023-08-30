@@ -1,3 +1,117 @@
+#########################################
+######### Sway section
+########################################
+
+## Base
+manjaro-sway/manjaro-sway-settings
+
+
+## Sway Extras
+swaybg # background switcher
+>extra flashfocus # nicer flashing on focus change
+swaylock-effects # swaylock with nicer effects
+>extra wlsunset # time & place based light temperature
+>extra kanshi # automatically load matching output profiles
+>extra autotiling-rs # automated tiling
+>extra sworkstyle # dynamic workspace icons in waybar
+>extra swaycwd # determines the cwd of a sway container
+waybar # sys bar
+>extra zeit # command line time tracker
+
+## Wayland support
+
+xorg-xwayland # xorg-wayland bridge
+>extra wlay # graphical display management like arandr
+qt5-wayland
+qt6-wayland
+gnome-keyring # unlock keyring on login
+polkit-gnome # polkit for visual superuser access
+>extra xdg-desktop-portal-wlr
+manjaro-pipewire
+
+## Greeter
+
+greetd
+greetd-tuigreet
+
+## Browser
+
+firefox
+
+## Themes
+
+qt5ct
+qt6ct
+kvantum-qt5
+kvantum-theme-matcha
+gtk3-nocsd
+matcha-gtk-theme
+papirus-maia-icon-theme
+xcursor-breeze
+
+## File systems access
+
+pcmanfm-gtk3
+gvfs
+>extra gvfs-mtp
+>extra file-roller
+>extra p7zip
+
+## Sound, video and bluetooth
+
+pulsemixer
+bluez
+bluez-utils
+playerctl
+
+## Network
+>extra network-manager-applet
+dhclient
+
+## Multimedia
+
+>extra mplayer # multimedia player
+>extra ffmpeg
+>extra ffmpegthumbnailer
+>extra zathura
+>extra zathura-pdf-poppler
+>extra gnome-epub-thumbnailer
+>extra imv
+
+## Package Management
+
+yay
+>extra manjaro-aur-support
+pamac-gtk
+>extra appimagelauncher
+>extra web-installer-url-handler
+
+## Utils
+
+>extra apparmor
+xdg-user-dirs
+>extra manjaro-settings-manager
+>extra manjaro-settings-manager-notifier
+>extra poweralertd
+
+## Extra fonts
+
+>extra wqy-microhei
+
+## CLI tools
+
+curl
+jq
+oh-my-zsh
+wget
+wl-clipboard # wayland clipboard application
+cliphist # clipboard history application
+
+
+################################################
+############ xfce4 stuff
+################################################
+
 ## Network
 avahi
 networkmanager
@@ -29,10 +143,10 @@ gst-plugins-good
 gst-plugins-ugly
 libdvdcss
 >multilib manjaro-alsa
-manjaro-pulse
-pulseaudio-bluetooth
-pulseaudio-ctl
-pulseaudio-zeroconf
+# manjaro-pulse
+# pulseaudio-bluetooth
+# pulseaudio-ctl
+# pulseaudio-zeroconf
 
 ## Connect Packages
 android-tools
@@ -159,7 +273,7 @@ bash-completion
 dmidecode # optional dependency inxi
 engrampa
 firefox
-# >extra flashplugin
+>extra flashplugin
 >extra galculator
 gcolor3
 >extra gimp
@@ -169,10 +283,10 @@ gufw
 >extra hexchat
 htop
 inxi
-#>extra libreoffice-still
-#>extra microsoft-office-online-jak
-#>extra freeoffice
-#>extra onlyoffice-desktopeditors
+>extra libreoffice-still
+>extra microsoft-office-online-jak
+>extra freeoffice
+>extra onlyoffice-desktopeditors
 manjaro-hello
 manjaro-application-utility
 manjaro-settings-manager
@@ -181,16 +295,15 @@ manjaro-settings-manager-notifier
 >extra mlocate
 mousepad
 mugshot
->basic parole # media player
 >extra pidgin
 powertop
 screenfetch
 evince
 >extra poppler-data  # CKJ support for pdf
-#>basic sylpheed # mail client
+# >basic sylpheed # mail client
 >extra thunderbird
 vim
-vlc
+vlc # media player
 >extra viewnior
 >extra xfburn
 >extra yelp
@@ -201,11 +314,11 @@ unace  # ACE archive support
 unrar  # RAR archive support
 
 ## Documentation
-#manjaro-documentation-en
+# manjaro-documentation-en
 
 ## Settings packages
->extra manjaro-xfce-gtk3-settings
->basic manjaro-xfce-gtk3-minimal-settings
+# >extra manjaro-xfce-gtk3-settings
+# >basic manjaro-xfce-gtk3-minimal-settings
 manjaro-browser-settings
 
 ## Xorg Input Drivers
@@ -235,9 +348,9 @@ xorg-mkfontscale
 perl-file-mimeinfo
 xdg-desktop-portal-gtk
 xdg-utils
-#xdg-su
+# xdg-su
 >extra timeshift
-#>extra kernel-alive
+>extra kernel-alive
 
 ## Misc
 gtkhash-thunar
@@ -245,112 +358,3 @@ manjaro-hotfixes
 >basic squashfs-tools
 xiccd # enable color profile settings
 tlp
-
-#########################################
-######### Sway section
-########################################
-
-## Base
-manjaro-sway/manjaro-sway-settings
-
-
-## Sway Extras
-swaybg # background switcher
->extra flashfocus # nicer flashing on focus change
-swaylock-effects # swaylock with nicer effects
->extra wlsunset # time & place based light temperature
->extra kanshi # automatically load matching output profiles
->extra autotiling-rs # automated tiling
->extra sworkstyle # dynamic workspace icons in waybar
->extra swaycwd # determines the cwd of a sway container
-waybar # sys bar
->extra zeit # command line time tracker
-
-## Wayland support
-
-xorg-xwayland # xorg-wayland bridge
->extra wlay # graphical display management like arandr
-qt5-wayland
-qt6-wayland
-gnome-keyring # unlock keyring on login
-polkit-gnome # polkit for visual superuser access
->extra xdg-desktop-portal-wlr
-manjaro-pipewire
-
-## Greeter
-
-greetd
-greetd-tuigreet
-
-## Browser
-
-firefox
-
-## Themes
-
-qt5ct
-qt6ct
-kvantum-qt5
-kvantum-theme-matcha
-gtk3-nocsd
-matcha-gtk-theme
-papirus-maia-icon-theme
-xcursor-breeze
-
-## File systems access
-
-pcmanfm-gtk3
-gvfs
->extra gvfs-mtp
->extra file-roller
->extra p7zip
-
-## Sound, video and bluetooth
-
-pulsemixer
-bluez
-bluez-utils
-playerctl
-
-## Network
->extra network-manager-applet
-dhclient
-
-## Multimedia
-
->extra mplayer # multimedia player
->extra ffmpeg
->extra ffmpegthumbnailer
->extra zathura
->extra zathura-pdf-poppler
->extra gnome-epub-thumbnailer
->extra imv
-
-## Package Management
-
-yay
->extra manjaro-aur-support
-pamac-gtk
->extra appimagelauncher
->extra web-installer-url-handler
-
-## Utils
-
->extra apparmor
-xdg-user-dirs
->extra manjaro-settings-manager
->extra manjaro-settings-manager-notifier
->extra poweralertd
-
-## Extra fonts
-
->extra wqy-microhei
-
-## CLI tools
-
-curl
-jq
-oh-my-zsh
-wget
-wl-clipboard # wayland clipboard application
-cliphist # clipboard history application
